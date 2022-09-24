@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Gentleman Suite</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.dark.min.css" />
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="logo.png">
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="true" href="#!">NTC</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Ncell</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body bg-dark bg-gradient">
+              <h5 class="card-title">NTC Balance Transfer</h5>
+              <p class="card-text">
+              <div class="form-outline">
+                <input type="text" id="recvn" class="form-control" onkeydown="keyDownHandler(this, event)" />
+                <label class="form-label" for="recvn">Phone number</label>
+              </div>
+              <br>
+              <div class="form-outline">
+                <input type="text" id="amt" class="form-control" onkeydown="keyDownHandler(this, event)" />
+                <label class="form-label" for="amt">Amount</label>
+              </div>
+              <br>
+              <div class="form-outline">
+                <input type="text" id="secode" class="form-control" onkeydown="keyDownHandler(this, event)" />
+                <label class="form-label" for="secode">Security Code</label>
+              </div>
+              <br>
+              To get you Security code, send "SCODE" (without quotes) to 1415. And, I'm not much aware about NTC's
+              stuff. <a target="_blank" href="https://www.ntc.net.np/notices/useful-short-codes">This link maybe help
+                you for more
+                info.</a>
+              </p>
+              <script>
+                function updateHyperlink() {
+                  const number = document.querySelector('#recvn').value;
+                  const amount = document.querySelector('#amt').value;
+                  const secode = document.querySelector('#secode').value;
+                  document.querySelector('#xl').href = `tel:*422*${secode}*${number}*${amount}#`;
+                }
+                function keyDownHandler(elem, e) {
+                  updateHyperlink();
+                }
+              </script>
+              <a href="#" id="xl" onkeydown="keyDownHandler(this, event)" class="btn btn-success bg-gradient text-dark"
+                style="border-radius: 20px">Transfer Balance</a>
+              <br>
+              <br>
+              <a href="#!" disabled class="btn btn-info text-danger" style="border-radius: 20px">Request Data-Pack
+                Transfer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>
