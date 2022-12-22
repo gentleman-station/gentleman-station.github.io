@@ -1,3 +1,1 @@
-# <a href="https://gentleman-station.github.io"> # Gentleman Suite </a>
-
-A simple suite for `#Gentlemen`!
+# Gentleman gayo rudai ghara - aba `Prof. - Xadk3` matra cha.
